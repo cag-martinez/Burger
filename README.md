@@ -8,6 +8,10 @@ This fun game allows users to be creative and create a burger by name and post i
 * Express-Handlebars
 * ORM
 
+> ### Deployed application
+
+> [https://dazzling-mount-rainier-71399.herokuapp.com/](http://https://dazzling-mount-rainier-71399.herokuapp.com/.com)
+
 > ### Sample image
 
 ![example](/public/assets/image/burger2.png)
