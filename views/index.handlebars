@@ -27,7 +27,7 @@
   </div>
 </div>
 
-<form class="create-form mb-3">
+<form class="create-form mb-3" style="centered">
   <div>
     <div className="box" id="search-bar">
       <input type="text" id="createBurger" placeholder="create a burger">
@@ -38,7 +38,7 @@
 
 <div class="col-md">
   <ol class="list-group">
-    <h2>devoured burgers!</h2>
+    <h2>Devoured burgers!</h2>
     <ul>
       {{#each burgers}}
       {{#if devoured}}
@@ -49,19 +49,4 @@
       {{/each}}
   </ol>
 
-  <h2>Add a Cat</h2>
-  <form class="create-form">
-
-    <div class="form-group">
-      <label for="ca">Cat Name:</label>
-      <input type="text" id="ca" name="name">
-    </div>
-
-    <div class="form-group">
-      <label for="sleepy">Sleepy?</label><br>
-      <input type="radio" name="sleepy" value="1" checked> Sleepy!<br>
-      <input type="radio" name="sleepy" value="0"> Awake
-    </div>
-
-    <button type="submit">Add Cat</button>
-  </form>
+  
