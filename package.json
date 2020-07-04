@@ -1,0 +1,24 @@
+{
+  "name": "burger",
+  "version": "1.0.0",
+  "description": "This fun game allows users to create a burger and post it to the site and view the burgers of other users given the chance to press on a button a devouring the burger of their choice!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cag-martinez/Burger.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cag-martinez/Burger/issues"
+  },
+  "homepage": "https://github.com/cag-martinez/Burger#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.5",
+    "mysql": "^2.18.1"
+  }
+}
