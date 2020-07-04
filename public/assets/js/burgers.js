@@ -1,6 +1,6 @@
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(function() {
-  $(".create-form").on("click", function(event) {
+  $(".box").on("submit", function(event) {
     event.preventDefault();
     // var id = $(this).data("id");
     var newBurger = {burger_name: $('#createBurger').val().trim()}
@@ -10,8 +10,8 @@ $(function() {
     // };
 
     // Send the PUT request.
-    $.ajax("/api/burgers/" + id,{
-      type: "PUT",
+    $.ajax("/api/burgers", {
+      type: "POST",
       data: newBurger
     }).then(
       function() {
@@ -23,38 +23,39 @@ $(function() {
 
   $(".devour-burger").on("click", function(event) {
     // Make sure to preventDefault on a submit event.
-    event.preventDefault();
+    // event.preventDefault();
 
     var id = $(this).data("id");
-    var devour = $(this).data("newdevour")
-    var newState = { devoured: true}
+    var newDevour = $(this).data("newdevour");
+    var newBurgerState = { devoured: true}
 
     // Send the POST request.
-    $.ajax("/api/burgers" + id, {
-      type: "POST",
-      data: newState
+    $.ajax("/api/burgers/" + id, {
+      type: "PUT",
+      data: newBurgerState
     }).then(
       function() {
-        console.log(devour);
+        console.log(newDevour);
         // Reload the page to get the updated list
         location.reload();
       }
     );
   });
 
-  $(".delete-cat").on("click", function(event) {
-    var id = $(this).data("id");
+//   $(".delete-cat").on("click", function(event) {
+//     var id = $(this).data("id");
 
-    // Send the DELETE request.
-    $.ajax("/api/cats/" + id, {
-      type: "DELETE"
-    }).then(
-      function() {
-        console.log("deleted cat", id);
-        // Reload the page to get the updated list
-        location.reload();
-      }
-    );
-  });
-});
+//     // Send the DELETE request.
+//     $.ajax("/api/cats/" + id, {
+//       type: "DELETE"
+//     }).then(
+//       function() {
+//         console.log("deleted cat", id);
+//         // Reload the page to get the updated list
+//         location.reload();
+//       }
+//     );
+//   });
+// });
+  })
 })
