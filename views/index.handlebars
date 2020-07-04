@@ -1,38 +1,67 @@
-<h1>Cats!</h1>
+<div class="text-center">
+  <img src="/assets/img/burger.jpg" alt="trio of burgers">
+</div>
+
+<div class="container">
+  <h1 class="display-4 text-center">Build a burger and try one!!</h1>
+</div>
 
 <h2>Cats that are not sleepy!</h2>
 
-<ul>
-  {{#each cats}}
-    {{#unless sleepy}}
-      {{> cats/cat-block sleep=true}}
-    {{/unless}}
-  {{/each}}
-</ul>
-
-<h2>Cats that are sleepy!</h2>
-
-<ul>
-  {{#each cats}}
-    {{#if sleepy}}
-      {{> cats/cat-block sleep=false}}
-    {{/if}}
-  {{/each}}
-</ul>
-
-<h2>Add a Cat</h2>
-<form class="create-form">
-
-  <div class="form-group">
-    <label for="ca">Cat Name:</label>
-    <input type="text" id="ca" name="name">
+<div class="row">
+  <div class="col-md">
+    <ol class="list-group">
+      <h2>Pick a burger</h2>
+      {{#each burgers}}
+      {{#unless devoured}}
+      <li class="list-group-item">
+        <p>
+          {{id}}. {{burger_name}}
+          <button data-newdevour="{{devoured}}" data-id="{{id}}"
+            class="devour-burger btn btn-secondary float-right">Devour</button>
+        </p>
+      </li>
+      {{/unless}}
+      {{/each}}
+    </ol>
   </div>
+</div>
 
-  <div class="form-group">
-    <label for="sleepy">Sleepy?</label><br>
-    <input type="radio" name="sleepy" value="1" checked> Sleepy!<br>
-    <input type="radio" name="sleepy" value="0"> Awake
+<form class="create-form mb-3">
+  <div>
+    <div className="box" id="search-bar">
+      <input type="text" id="createBurger" placeholder="create a burger">
+      <button type="submit" class="btn btn-primary mt-2">Submit</button>
+    </div>
   </div>
-
-  <button type="submit">Add Cat</button>
 </form>
+
+<div class="col-md">
+  <ol class="list-group">
+    <h2>devoured burgers!</h2>
+    <ul>
+      {{#each burgers}}
+      {{#if devoured}}
+      <li class="list-group-item">
+        <p>{{id}}. {{burger_name}}</p>
+      </li>
+      {{/if}}
+      {{/each}}
+  </ol>
+
+  <h2>Add a Cat</h2>
+  <form class="create-form">
+
+    <div class="form-group">
+      <label for="ca">Cat Name:</label>
+      <input type="text" id="ca" name="name">
+    </div>
+
+    <div class="form-group">
+      <label for="sleepy">Sleepy?</label><br>
+      <input type="radio" name="sleepy" value="1" checked> Sleepy!<br>
+      <input type="radio" name="sleepy" value="0"> Awake
+    </div>
+
+    <button type="submit">Add Cat</button>
+  </form>
