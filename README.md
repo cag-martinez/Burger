@@ -10,7 +10,7 @@ This fun game allows users to be creative and create a burger by name and post i
 
 > ### Deployed application
 
-> [https://dazzling-mount-rainier-71399.herokuapp.com/](http://https://dazzling-mount-rainier-71399.herokuapp.com/.com)
+> [https://dazzling-mount-rainier-71399.herokuapp.com/](https://dazzling-mount-rainier-71399.herokuapp.com/)
 
 > ### Sample image
 
