@@ -8,5 +8,7 @@ This fun game allows users to be creative and create a burger by name and post i
 * Express-Handlebars
 * ORM
 
+> ### Sample image
 
+![example](/public/assets/image/burger2.png)
 
