@@ -1,2 +1,12 @@
 # Burger
-This fun game allows users to create a burger and post it to the site and view the burgers of other users given the chance to press on a button a devouring the burger of their choice! 
+This fun game allows users to be creative and create a burger by name and post it to the site. They can view the burgers of other users and if they lik what they see, the user can press the devour button and.. DEVOUR IT!! Once a burger is devoured, it is then moved to a separate section that displays the burgers that have been devoured.
+
+> ### Technologies used:
+* MySQL
+* Node
+* Express
+* Express-Handlebars
+* ORM
+
+
+

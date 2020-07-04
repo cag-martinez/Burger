@@ -26,7 +26,7 @@ $(function() {
     // event.preventDefault();
 
     var id = $(this).data("id");
-    var newDevour = $(this).data("newdevour");
+    var devoured = $(this).data("newdevour");
     var newBurgerState = { devoured: true}
 
     // Send the POST request.
@@ -35,7 +35,7 @@ $(function() {
       data: newBurgerState
     }).then(
       function() {
-        console.log(newDevour);
+        console.log(devoured);
         // Reload the page to get the updated list
         location.reload();
       }
