@@ -17,8 +17,7 @@
       <li class="list-group-item">
         <p>
           {{id}}.{{burger_name}}
-          <button data-newdevour="{{devoured}}" data-id="{{id}}"
-            class="devour-burger btn btn-primary float-right" style="text-align: center;">Devour</button>
+          <button data-newdevour=`${devoured}` class="devour-burger btn btn-primary float-right" data-id={{id}} style="text-align: center;">Devour</button>
         </p>
       </li>
       {{/unless}}
@@ -30,11 +29,11 @@
 <form class="create-form mb-3" style="position: ;">
   <div>
     <div class="box" id="search-bar">
-      <input type="text" calass= "box" id="createBurger" placeholder="create a burger">
-      <button type="submit" class="btn btn-primary mt-2">Submit</button>
+      <input type="text" calass= "box" id="createBurger" placeholder="create a burger"> 
     </div>
   </div>
 </form>
+<button class=" save-btn btn btn-primary mt-2">Submit</button>
 
 <div class="col-md">
   <ol class="list-group">
