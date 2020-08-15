@@ -1,4 +1,4 @@
-// Make sure we wait to attach our handlers until the DOM is fully loaded.
+// waiting to attach our handlers until the DOM is fully loaded.
 $(document).ready(function () {
   console.log("js file");
   $(document).on("click", ".save-btn", function (event) {
@@ -13,7 +13,6 @@ $(document).ready(function () {
       data: newBurger,
     }).then(function () {
       console.log("added a burger");
-      // Reload the page to get the updated list
       location.reload();
     });
   });
@@ -29,7 +28,6 @@ $(document).ready(function () {
       data: newBurgerState,
     }).then(function () {
       console.log(devoured);
-      // Reload the page to get the updated list
       location.reload();
     });
   });
